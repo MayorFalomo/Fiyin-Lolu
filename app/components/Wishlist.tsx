@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Check, Copy } from 'lucide-react';
 import { toast } from 'sonner';
 import LiquidButton from './animations/LiquidButton';
+import { Toaster } from '@/components/ui/sonner';
 
 type Props = {};
 
@@ -49,7 +50,6 @@ const Wishlist = (props: Props) => {
           onClick={() => {
             setShowAcct(!showAcct);
             setCopied(false);
-            toast.success('Account details copied to clipboard');
           }}
         />
       </div>
@@ -65,6 +65,7 @@ const Wishlist = (props: Props) => {
                   onClick={() => {
                     setCopied(true);
                     navigator.clipboard.writeText('0726008292');
+                    toast.success('Account details copied to clipboard');
                   }}
                   className="ml-4 cursor-pointer"
                 >
