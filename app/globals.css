@@ -2,20 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Liquid Button Styles */
+.liquid-button {
+  position: relative;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  /* color: var(--text-color, #4a4a4a); */
+  cursor: pointer;
+  border: var(--border-width, 2px) solid var(--border-color, #4a4a4a);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  z-index: 1;
+  min-width: 150px;
+}
+
+.liquid-button-text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.35s ease;
+}
+
+.liquid {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--liquid-color, #3498db);
+  z-index: 1;
+  transition: all 0.35s ease;
+}
+
+.liquid-button:hover .liquid {
+  top: 0;
+}
+
+.liquid-button:hover .liquid-button-text {
+  color: var(--hover-text-color, white);
+}
+
+.liquid-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--hover-border-color, var(--border-color, #4a4a4a));
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }
