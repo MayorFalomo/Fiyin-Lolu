@@ -7,7 +7,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
+} from '@/app/ui/select';
 import React from 'react';
 import Texts from '../Texts';
 import { Check } from 'lucide-react';

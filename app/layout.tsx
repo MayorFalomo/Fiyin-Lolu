@@ -9,7 +9,7 @@ import {
   Sofia,
 } from 'next/font/google';
 import './globals.css';
-import { Toaster } from '@/components/ui/sonner';
+import { Toaster } from '@/app/ui/sonner';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

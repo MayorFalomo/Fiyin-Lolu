@@ -6,7 +6,6 @@ import { AnimatePresence } from 'framer-motion';
 import { Check, Copy } from 'lucide-react';
 import { toast } from 'sonner';
 import LiquidButton from './animations/LiquidButton';
-import { Toaster } from '@/components/ui/sonner';
 
 type Props = {};
 
