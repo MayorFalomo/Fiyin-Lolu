@@ -28,12 +28,16 @@ const SaveTheDate = (props: Props) => {
             We're truly looking forward to having you as a guest in our celebration.
           </p>
         </div>
-        <div className="w-full flex items-center justify-between mt-[100px]">
-          <p className="font-petrona">Only 150days to go </p>
+        <div className="w-full flex items-center justify-between mt-[70px]">
+          <p className="font-semibold text-[20px] font-petrona">Only 150days to go. </p>
           <ul className="flex font-ebGaramond items-center gap-1">
             <li>Built with love by </li>
             <li className={`relative cursor-pointer group inline-block`}>
-              <a target="_blank" rel="noreferrer" href="https://github.com/Mayorfalomo">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://mayowa-falomo.netlify.app"
+              >
                 Mayowa
               </a>
               <motion.span

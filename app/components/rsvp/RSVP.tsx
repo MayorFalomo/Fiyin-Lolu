@@ -6,7 +6,10 @@ type Props = {};
 
 const RSVP = (props: Props) => {
   return (
-    <div className="bg-black relative flex flex-col items-center justify-center min-h-screen w-screen py-[40px]">
+    <div
+      id="rsvp"
+      className="bg-black relative flex flex-col items-center justify-center min-h-screen w-screen py-[40px]"
+    >
       <div className=" w-[90%]   mx-auto flex items-start justify-between text-white text-center">
         <div className="w-full">
           <h1 className="text-[40px] text-start mb-4 font-belleze">KINDLY RSVP</h1>

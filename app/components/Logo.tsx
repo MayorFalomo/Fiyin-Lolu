@@ -39,6 +39,7 @@ const Logo = (props: Props) => {
           transition={{
             duration: 0.8,
             delay: 0.5,
+            ease: [0.56, 0.03, 0.12, 1.04],
           }}
           className="bg-black h-0.5 w-[40px]"
         ></motion.span>
