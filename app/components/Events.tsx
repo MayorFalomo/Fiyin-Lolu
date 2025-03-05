@@ -16,35 +16,33 @@ interface Event {
 }
 
 const Events: React.FC = () => {
-  const [startAnimation, setStartAnimation] = React.useState(false);
-
   const events: Event[] = [
     {
       id: 1,
       name: 'EXCHANGE OF VOWS',
-      day: 'FRI',
-      month: 'NOV',
+      day: 'Fri',
+      month: 'Nov',
       date: 12,
       time: '10-2pm',
-      location: 'THE ROYAL EVENTS CENTER',
+      location: 'The royal events center',
     },
     {
       id: 2,
       name: 'WEDDING DAY',
-      day: 'SAT',
-      month: 'NOV',
+      day: 'Sat',
+      month: 'Nov',
       date: 13,
       time: '10-6pm',
-      location: 'THE MONARCH EVENTS CENTER',
+      location: 'The Monarch events center',
     },
     {
       id: 3,
       name: 'AFTER PARTY, FAAJI!',
-      day: 'SAT',
-      month: 'NOV',
+      day: 'Sat',
+      month: 'Nov',
       date: 13,
       time: '8-4pm',
-      location: 'HADES NIGHT CLUB',
+      location: 'Hades hotel and club',
     },
   ];
 
@@ -57,7 +55,7 @@ const Events: React.FC = () => {
   const ref = React.useRef(null);
   const inView = useInView(ref, {
     once: false, // Animation will trigger every time it comes into view
-    amount: 0.3, // Only needs 30% of the element to be visible
+    amount: 0.1, // Only needs 30% of the element to be visible
     margin: '0px 0px -50px 0px', // Negative bottom margin to trigger earlier
   });
 
@@ -87,13 +85,13 @@ const Events: React.FC = () => {
   };
 
   return (
-    <div className="max-h-[100vh] w-screen">
-      <div id="events" className="w-[90%] mx-auto flex items-start">
+    <div className="min-[800px]:h-[100vh] max-[800px]:min-h-screen w-screen">
+      <div id="events" className="w-[90%] mx-auto flex max-[800px]:flex-col items-start">
         <div
           ref={ref}
-          className="h-screen flex flex-col gap-4 w-fit items-star justify-start "
+          className="h-screen max-[800px]:h-[45vh] flex flex-col gap-4 w-fit items-star justify-start "
         >
-          <p className="bg-black mx-auto h-[200px] w-0.5"></p>
+          <p className="bg-black mx-auto h-[200px] max-[800px]:h-[100px] w-0.5"></p>
           <div>
             <h1 className="flex flex-col scroll-m-20 text-4xl leading-[60px] font-petrona font-medium lg:text-[60px]">
               <FadeInText delay={0.2} className=" whitespace-nowrap">
@@ -102,7 +100,7 @@ const Events: React.FC = () => {
             </h1>
             <div className="flex items-center justify-end gap-4">
               <img className="w-[50px]" src="/vector.png" alt="img" />
-              <h1 className=" scroll-m-20 text-4xl leading-[60px] font-petrona font-medium lg:text-[60px]">
+              <h1 className=" scroll-m-20 text-4xl lg:leading-[60px] font-petrona font-medium lg:text-[60px]">
                 <FadeInText delay={0.5} className="text-end mt-6">
                   Events
                 </FadeInText>
@@ -111,7 +109,7 @@ const Events: React.FC = () => {
           </div>
           <p className="bg-black/50 mx-auto mt-3 h-full w-0.5"></p>
         </div>
-        <div className="w-full h-screen flex flex-col items-start justify-end">
+        <div className="w-full min-[800px]:h-screen flex flex-col items-start min-[800px]:justify-between">
           <div className="h-[250px] mt-3 w-[250px] ml-auto grayscale-[50] hover:grayscale-0 transition-all duration-700 ease-out object-cover flex flex-col items-center justify-start">
             <motion.img
               className="w-full h-full object-cover"
@@ -133,9 +131,6 @@ const Events: React.FC = () => {
                 duration: 1,
                 ease: [0.56, 0.03, 0.12, 1.04],
               }}
-              onAnimationEnd={() => {
-                setStartAnimation(true);
-              }}
             />
           </div>
 
@@ -147,28 +142,28 @@ const Events: React.FC = () => {
               variants={containerVariants}
               initial={'hidden'}
               animate={inView ? 'visible' : 'hidden'}
-              className="w-[80%]"
+              className="w-[80%] max-[800px]:my-6 max-[950px]:w-[90%] max-[600px]:w-full"
             >
               {events.map((event) => (
                 <motion.div
                   variants={itemVariants}
-                  className="flex items-start justify-between border-b p-3 "
+                  className="flex items-start justify-between gap-4 border-b py-3 min-[600px]:px-3 max-[600px]:px-0 "
                   key={event.id}
                 >
-                  <div className="flex items-start gap-4 ">
+                  <div className="flex items-end gap-4  ">
                     <p className="flex flex-col font-ebGaramond items-start">
                       <span>{event?.day}</span>
                       <span>{event?.month}</span>
                     </p>
-                    <h2 className="font-bold font-ebGaramond text-[40px]">
+                    <h2 className="font-bold font-ebGaramond text-[30px] max-[800px]:text-[24px] ">
                       {event.date}
                     </h2>
                   </div>
                   <div className="flex flex-col">
-                    <h2 className="font-bold font-belleze text-end text-[24px]">
+                    <h2 className="font-bold font-belleze text-end text-[20px] max-[600px]:text-[16px]">
                       {event.name}{' '}
                     </h2>
-                    <p className="text-[18px] font-ebGaramond text-end">
+                    <p className="text-[18px] max-[600px]:text-[16px] capitalize font-ebGaramond text-end">
                       {event?.location} | {event.time}{' '}
                     </p>
                   </div>

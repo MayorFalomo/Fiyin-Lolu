@@ -39,7 +39,7 @@ const LiquidButton: React.FC<LiquidButtonProps> = ({
       className={`liquid-button ${className}`}
       onClick={onClick}
       style={buttonStyle}
-      aria-label={text}
+      aria-label={ariaLabel}
     >
       <span className="liquid-button-text">{text}</span>
       <div className="liquid"></div>

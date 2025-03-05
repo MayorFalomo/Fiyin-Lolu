@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+'use client';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 interface IProps {
-  inView: boolean;
+  inView?: boolean;
   initialOpacity?: number;
   finalOpacity?: number;
   initialWidth?: string;
@@ -18,7 +19,7 @@ interface IProps {
 }
 
 const SmoothBorder: React.FC<IProps> = ({
-  inView,
+  // inView,
   initialOpacity = 0,
   finalOpacity = 1,
   initialWidth = '0',
@@ -28,10 +29,15 @@ const SmoothBorder: React.FC<IProps> = ({
   easing,
   bgColor = '#000',
   className = `z-1 absolute left-0 bottom-[-2px] max-[720px]:bottom-[4px] h-0.5 `,
-  ref,
+  // ref,
   onAnimationComplete,
   onAnimationEnd,
 }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, {
+    once: false,
+  });
+
   return (
     <motion.span
       ref={ref}

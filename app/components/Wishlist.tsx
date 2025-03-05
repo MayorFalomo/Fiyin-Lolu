@@ -16,11 +16,11 @@ const Wishlist = (props: Props) => {
   return (
     <div
       id="wishlist"
-      className="flex flex-col items-center justify-center min-h-[70vh] bg-beige w-screen"
+      className="flex flex-col items-center justify-center min-h-[70vh] py-[40px] bg-beige w-screen"
     >
       <div>
-        <h2 className="text-4xl font-bold font-petrona text-center">Our Wishlist</h2>
-        <Texts className=" w-[60%] mt-4 mx-auto text-lg font-ebGaramond text-center">
+        <h2 className="text-[36px] font-bold font-petrona text-center">Our Wishlist</h2>
+        <Texts className=" w-[60%] max-[700px]:w-[90%] mt-4 mx-auto text-lg font-ebGaramond text-center">
           While your presence on our big day is the greatest gift, If you'd like to share
           in our joy on our big day through a gift, please visit our wishlist and if you'd
           rather send monetary contributions towards our future, It would be cherished

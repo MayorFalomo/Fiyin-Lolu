@@ -4,6 +4,7 @@ import { Faqs } from './faq/FaqStore';
 import { Minus, Plus } from 'lucide-react';
 import Texts from './Texts';
 import { motion } from 'framer-motion';
+import SmoothBorder from './animations/SmoothBorder';
 
 type Props = {};
 
@@ -14,18 +15,22 @@ const Faq = (props: Props) => {
 
   return (
     <div className=" w-screen p-2 bg-offWhite">
-      <div id="faq" className="w-[90%]  bg-offWhite mt-[60px] pb-[60px] mx-auto">
-        <h1 className="text-[40px] text-start mb-4 font-belleze">
-          FAQ <span className=" text-[20px] ">(Frequently asked questions).</span>
+      <div id="faq" className="w-[90%]  bg-offWhite mt-[40px] pb-[60px] mx-auto">
+        <h1 className=" relative text-[40px] max-[600px]:text-[30px] text-start mb-4 font-belleze">
+          FAQ{' '}
+          <span className=" text-[20px] max-[480px]:text-[16px] ">
+            (Frequently asked questions).
+          </span>
+          <SmoothBorder />
         </h1>
 
-        <div className="w-[80%] flex justify-between items-start ">
-          <div className=" w-fit flex flex-col mt-4">
+        <div className="w-[80%] max-[1100px]:w-[90%] max-[800px]:w-full mt-[40px] flex max-[480px]:flex-col justify-between items-start ">
+          <div className=" w-fit flex flex-wrap min-[480px]:flex-col max-[480px]:justify-center gap-4 mt-4">
             {Faqs.filter((item) => item.title === item.title).map((faq, index) => (
               <div
                 className={`${
                   faq.title === faqTitle ? 'border-b border-black' : ''
-                } py-2`}
+                } py-1`}
                 key={faq.id}
               >
                 <button
@@ -39,7 +44,7 @@ const Faq = (props: Props) => {
               </div>
             ))}
           </div>
-          <div className="w-[500px]">
+          <div className="w-[500px] max-[750px]:w-[400px] max-[580px]:w-[320px] max-[480px]:w-full">
             {Faqs.slice(0, 9).map((faq) => (
               <motion.div
                 initial={{ height: 80 }}
@@ -58,7 +63,7 @@ const Faq = (props: Props) => {
                       setFaqID(faqID === faq.id ? 0 : faq.id);
                       setFaqTitle(faq.title ?? 'all');
                     }}
-                    className="font-belleze flex items-center justify-between"
+                    className="font-belleze flex items-start justify-between"
                   >
                     <h2 className="font-semibold">{faq.question}</h2>
                     <p className="">{faqID === faq.id ? <Minus /> : <Plus />}</p>

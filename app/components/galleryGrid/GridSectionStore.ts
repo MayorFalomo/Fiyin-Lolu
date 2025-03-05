@@ -33,43 +33,43 @@ export const GalleryItems: GalleryItem[] = [
     id: 5,
     title: "Urban Skyline",
     description: "City skyline at night with lights",
-    imageUrl: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "/almost_kissing.jpg",
     size: "small"
   },
   {
     id: 6,
     title: "Tropical Paradise",
     description: "Palm trees and clear blue water",
-    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    size: "wide"
+    imageUrl: "/lolu_look.jpg",
+    size: "tall"
   },
   {
     id: 7,
     title: "Snowy Peaks",
     description: "Snow-capped mountain peaks",
-    imageUrl: "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    size: "medium"
+    imageUrl: "/shoe_exchange.jpg",
+    size: "large"
   },
   {
     id: 8,
     title: "Autumn Colors",
     description: "Vibrant fall foliage by a lake",
     imageUrl: "https://images.unsplash.com/photo-1508669232496-137b159c1cdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    size: "small"
+    size: "medium"
   },
   {
     id: 9,
     title: "Autumn Colors",
     description: "Vibrant fall foliage by a lake",
     imageUrl: "https://images.unsplash.com/photo-1508669232496-137b159c1cdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    size: "medium"
+    size: "small"
   },
   {
     id: 10,
     title: "Autumn Colors",
     description: "Vibrant fall foliage by a lake",
     imageUrl: "https://images.unsplash.com/photo-1508669232496-137b159c1cdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    size: "small"
+    size: "wide"
   }
 ]
 

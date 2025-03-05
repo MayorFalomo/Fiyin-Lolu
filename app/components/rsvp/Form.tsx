@@ -21,7 +21,7 @@ const Form = (props: Props) => {
   const formik = useFormik({
     initialValues: {
       firstName: '',
-      lastName: '',
+      surname: '',
       family: '',
       email: '',
       attendance: '',
@@ -34,46 +34,37 @@ const Form = (props: Props) => {
   });
 
   return (
-    <div className="bg-beige font-ebGaramond w-fit text-black mx-auto p-6 rounded-lg">
+    <div className="bg-beige w-[70%] min-[500px]:min-w-[350px] max-[500px]:min-w-[150px] max-[600px]:w-[90%] font-ebGaramond text-black mx-auto py-6 min-[600px]:px-6 max-[600px]:px-3 rounded-lg">
       <form className="flex flex-col items-start gap-6">
         <p>Name: (required) </p>
-        <div className="flex items-center gap-6">
-          <div className="flex flex-col items-start gap-1">
+        <div className="flex w-full max-[650px]:flex-col min-[650px]:items-center gap-6">
+          <div className="flex w-[50%] max-[650px]:w-full flex-col items-start gap-1">
             <label htmlFor="firstName">First Name</label>
             <input
-              className="py-1 px-3 bg-transparent border-b border-black"
+              className="py-1 px-3 w-full bg-transparent border-b border-black"
               type="text"
               id="firstName"
               name="firstName"
               onChange={formik.handleChange}
               value={formik.values.firstName}
+              placeholder="Enter first name"
             />
           </div>
 
-          <div className="flex flex-col items-start gap-1">
-            <label htmlFor="name">Other Name (Name we know) </label>
+          <div className="flex w-full min-[650px]:w-[50%] flex-col items-start gap-1">
+            <label htmlFor="name">Surname </label>
             <input
-              className="py-1 px-3 bg-transparent border-b border-black"
+              className="py-1 px-3 w-full bg-transparent border-b border-black"
               type="text"
-              id="lastName"
-              name="lasName"
+              id="surname"
+              name="surname"
               onChange={formik.handleChange}
-              value={formik.values.lastName}
+              value={formik.values.surname}
+              placeholder="Enter surname"
             />
           </div>
         </div>
-        <div className="w-full flex flex-col items-start gap-1">
-          <label htmlFor="family">Family Name (optional)</label>
-          <input
-            className="py-1 px-3 bg-transparent w-full border-b border-black"
-            type="text"
-            id="family"
-            name="family"
-            placeholder="Orokunle Family"
-            onChange={formik.handleChange}
-            value={formik.values.family}
-          />
-        </div>
+
         <div className="w-full flex flex-col items-start gap-1">
           <label htmlFor="email">Email (required)</label>
           <input
@@ -87,35 +78,23 @@ const Form = (props: Props) => {
           />
         </div>
         <div className="w-full flex flex-col items-start gap-1">
-          <label htmlFor="Attendance">Will you be attending? (required)</label>
+          <label className="text-start" htmlFor="Attendance">
+            Will you be bringing a plus one? (required)
+          </label>
           <Select value={formik.values.attendance}>
             <SelectTrigger className="w-full border-none ">
               <SelectValue placeholder="Select attendance" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup className="border-none">
-                <SelectLabel>Confirm your attendance </SelectLabel>
-                <SelectItem value="Yes">Yes, I will be attending</SelectItem>
-                <SelectItem value="No">No, I would not be around</SelectItem>
+                <SelectLabel>Confirm attendance </SelectLabel>
+                <SelectItem value="Yes">Yes</SelectItem>
+                <SelectItem value="No">No</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
         </div>
-        <div className="w-full flex flex-col items-start gap-1">
-          <label htmlFor="Attendance">Invited by? (required)</label>
-          <Select>
-            <SelectTrigger className="w-full border-none ">
-              <SelectValue placeholder="Please tell us who invited you" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup className="border-none">
-                {/* <SelectLabel>Confirm your attendance </SelectLabel> */}
-                <SelectItem value="Yes">Groom's Family</SelectItem>
-                <SelectItem value="No">Bride's Family</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
+
         <button
           className=" mx-auto rounded-[45%] border border-black w-[100px] py-3"
           type="submit"

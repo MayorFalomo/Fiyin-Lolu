@@ -8,21 +8,28 @@ type Props = {};
 
 const Story = (props: Props) => {
   return (
-    <div className="bg-beige relative h-full w-full flex items-start ">
-      <div id="story" className="w-[30%] relative h-full object-cover">
-        <img
-          className="w-full min-h-full grayscale-[50] hover:grayscale-0 transition-all duration-700 ease-out"
-          src="/almost_kissing.jpg"
-          alt="img"
-        />
-        <img
-          className="absolute right-[-80px] top-1/3 w-[250px] h-[300px] object-cover grayscale-[50] hover:grayscale-0 transition-all duration-700 ease-out"
-          src="/ring_showing.jpg"
-          alt="img"
-        />
+    <div className="bg-beige relative min-[850px]:h-[100vh] min-h-[100vh] w-full flex max-[850px]:flex-col max-[850px]:items-center justify-start min-[850px]:items-start ">
+      <div
+        id="story"
+        className="w-[30%] max-[850px]:w-[90%] max-[850px]:mx-auto max-[850px]:flex max-[850px]:items-end gap-4 border border-blue-600 relative h-full object-cover"
+      >
+        <div className="w-full h-full max-[850px]:w-[500px] max-[850px]:h-[400px] max-[550px]:h-[300px] object-cover border border-green-600    ">
+          <img
+            className="h-full w-full object-cover grayscale-[50] hover:grayscale-0 transition-all duration-700 ease-out"
+            src="/almost_kissing.jpg"
+            alt="img"
+          />
+        </div>
+        <div className="min-[850px]:absolute max-[850px]:relative min-[850px]:right-[-80px] min-[850px]:top-1/3 w-[250px] h-[300px] max-[850px]:h-[200px] max-[550px]:h-[150px] object-cover ">
+          <img
+            className="w-full h-full object-cover grayscale-[50] hover:grayscale-0 transition-all duration-700 ease-out"
+            src="/ring_showing.jpg"
+            alt="img"
+          />
+        </div>
       </div>
-      <div className=" relative w-[70%] h-[90vh] flex items-center justify-center">
-        <div className="flex flex-col w-[50%] gap-4">
+      <div className=" relative w-[70%] max-[550px]:w-full min-[850px]:h-[90vh] h-full py-[60px] flex items-center justify-center">
+        <div className="flex flex-col w-[50%] max-[1100px]:w-[60%] max-[850px]:w-[90%] gap-4">
           <h1 className="text-3xl font-bold text-center font-petrona ">
             <FadeInText delay={0.5}>Our Love Story</FadeInText>
           </h1>
@@ -46,10 +53,10 @@ const Story = (props: Props) => {
           {/* </Texts> */}
         </div>
       </div>
-      <div className="absolute right-[0px] bottom-[90px] rotate-90 h-fit w-fit text-end flex items-center gap-4">
-        <Texts>Fiyin + Lolu</Texts>
+      <div className="absolute min-[650px]:right-[-60px] max-[650px]:right-[-90px] bottom-[150px] rotate-90 h-fit w-fit text-end max-[550px]:hidden  flex items-center gap-4">
+        <Texts>Judah + Lolu</Texts>
         <p className="w-4 h-0.5 bg-black"></p>
-        <Texts>Love </Texts>
+        <Texts>#JULO Forever </Texts>
       </div>
     </div>
   );

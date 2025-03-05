@@ -4,21 +4,17 @@ import {
   getGridClasses,
   getItemHeight,
 } from './galleryGrid/GridSectionStore';
+import SmoothBorder from './animations/SmoothBorder';
 
-type Props = {};
+type Props = {
+  noOfImages?: number;
+};
 
-const BentoGrid = (props: Props) => {
+const BentoGrid: React.FC<Props> = ({ noOfImages = GalleryItems.length }) => {
   return (
-    <div className="w-[90%] mx-auto ">
-      <div className="mb-12">
-        <h2 className="text-[50px] font-belleze mt-[60px] font-bold mb-2">Our Gallery</h2>
-        <p className="text-gray-600 max-w-2xl w-[400px]">
-          Explore our gallery of captured timeless moments, The beginning of a journey we
-          cannot wait to share with you.
-        </p>
-      </div>
+    <div className="">
       <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {GalleryItems.slice(0, 4).map((item, index) => (
+        {GalleryItems.slice(0, noOfImages).map((item, index) => (
           <div
             key={item.id}
             className={`
