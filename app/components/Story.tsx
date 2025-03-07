@@ -11,7 +11,7 @@ const Story: React.FC = () => {
         id="story"
         className="w-[30%] max-[850px]:w-[90%] max-[850px]:mx-auto max-[850px]:flex max-[850px]:items-end gap-4 relative h-full object-cover"
       >
-        <div className="w-full h-full max-[850px]:w-[500px] max-[850px]:h-[400px] max-[550px]:h-[300px] object-cover  ">
+        <div className="w-full h-full max-[850px]:w-[500px] max-[850px]:h-[400px] max-[550px]:h-[300px] object-cover">
           <img
             className="h-full w-full object-cover grayscale-[50] hover:grayscale-0 transition-all duration-700 ease-out"
             src="/almost_kissing.webp"
