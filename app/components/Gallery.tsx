@@ -4,9 +4,7 @@ import LiquidButton from './animations/LiquidButton';
 import Link from 'next/link';
 import SmoothBorder from './animations/SmoothBorder';
 
-type Props = {};
-
-const Gallery = (props: Props) => {
+const Gallery: React.FC = () => {
   return (
     <div id="gallery">
       <div className="w-[90%] mx-auto ">
@@ -17,7 +15,7 @@ const Gallery = (props: Props) => {
             </h2>
             <SmoothBorder className="absolute bottom-[5px] left-0 bg-black/40 h-0.5 w-full" />
           </div>
-          <p className="text-gray-600 max-w-2xl mt-6 w-[400px]">
+          <p className="text-gray-600 max-w-2xl mt-6 min-[500px]:w-[400px] w-fit">
             Explore our gallery of captured timeless moments, The beginning of a journey
             we cannot wait to share with you.
           </p>

@@ -1,19 +1,8 @@
 'use client';
 import React from 'react';
-import Texts from './Texts';
 import FadeInText from './animations/FadeInText';
 import { motion, useInView } from 'framer-motion';
-// import { useInView } from 'react-intersection-observer';
-
-interface Event {
-  id: number;
-  name: string;
-  day: string;
-  month: string;
-  date: number;
-  time: string;
-  location: string;
-}
+import { Event } from '../types/types';
 
 const Events: React.FC = () => {
   const events: Event[] = [
@@ -21,7 +10,7 @@ const Events: React.FC = () => {
       id: 1,
       name: 'EXCHANGE OF VOWS',
       day: 'Fri',
-      month: 'Nov',
+      month: 'Dec',
       date: 12,
       time: '10-2pm',
       location: 'The royal events center',
@@ -30,7 +19,7 @@ const Events: React.FC = () => {
       id: 2,
       name: 'WEDDING DAY',
       day: 'Sat',
-      month: 'Nov',
+      month: 'Dec',
       date: 13,
       time: '10-6pm',
       location: 'The Monarch events center',
@@ -39,23 +28,17 @@ const Events: React.FC = () => {
       id: 3,
       name: 'AFTER PARTY, FAAJI!',
       day: 'Sat',
-      month: 'Nov',
+      month: 'De',
       date: 13,
       time: '8-4pm',
       location: 'Hades hotel and club',
     },
   ];
 
-  // const ref = React.useRef(null);
-  // const inView = useInView({
-  //   triggerOnce: false,
-  //   threshold: 0.5,
-  // });
-
   const ref = React.useRef(null);
   const inView = useInView(ref, {
-    once: false, // Animation will trigger every time it comes into view
-    amount: 0.1, // Only needs 30% of the element to be visible
+    once: false,
+    amount: 0.1,
     margin: '0px 0px -50px 0px', // Negative bottom margin to trigger earlier
   });
 
@@ -70,7 +53,6 @@ const Events: React.FC = () => {
     },
   };
 
-  // Item animation variants (bottom to top)
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -89,7 +71,7 @@ const Events: React.FC = () => {
       <div id="events" className="w-[90%] mx-auto flex max-[800px]:flex-col items-start">
         <div
           ref={ref}
-          className="h-screen max-[800px]:h-[45vh] flex flex-col gap-4 w-fit items-star justify-start "
+          className="h-screen max-[800px]:h-[45vh] max-[480px]:h-[35vh] flex flex-col gap-4 max-[480px]:gap-1 w-fit items-start justify-start "
         >
           <p className="bg-black mx-auto h-[200px] max-[800px]:h-[100px] w-0.5"></p>
           <div>
@@ -99,7 +81,7 @@ const Events: React.FC = () => {
               </FadeInText>
             </h1>
             <div className="flex items-center justify-end gap-4">
-              <img className="w-[50px]" src="/vector.png" alt="img" />
+              <img className="w-[50px]" src="/vector.webp" alt="img" />
               <h1 className=" scroll-m-20 text-4xl lg:leading-[60px] font-petrona font-medium lg:text-[60px]">
                 <FadeInText delay={0.5} className="text-end mt-6">
                   Events
@@ -113,7 +95,7 @@ const Events: React.FC = () => {
           <div className="h-[250px] mt-3 w-[250px] ml-auto grayscale-[50] hover:grayscale-0 transition-all duration-700 ease-out object-cover flex flex-col items-center justify-start">
             <motion.img
               className="w-full h-full object-cover"
-              src="/flower_ring.jpg"
+              src="/flower_ring.webp"
               alt="img"
               initial={{
                 clipPath: 'inset(0 0 0 100%)',
@@ -172,16 +154,6 @@ const Events: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        {/* <div className="w-fit h-full border border-red-600">
-          <div className="border-b pb-3 border-black">
-            <h2 className="scroll-m-20 text-3xl font-medium first:mt-0">
-              Friday, November 28
-            </h2>
-
-            <Texts className="font-bold text-[20px] ">10:00 AM | Exchange Of Vows</Texts>
-            <span className="font-belleze"> The Royal Events Park Center</span>
-          </div>
-        </div> */}
       </div>
     </div>
   );

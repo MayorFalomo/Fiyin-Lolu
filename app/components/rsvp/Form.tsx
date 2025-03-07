@@ -95,6 +95,29 @@ const Form = (props: Props) => {
           </Select>
         </div>
 
+        <div className="w-full flex flex-col items-start gap-1">
+          <label className="text-start" htmlFor="Attendance">
+            Where would you like to be seated? (required)
+          </label>
+          <Select value={formik.values.attendance}>
+            <SelectTrigger className="w-full border-none ">
+              <SelectValue placeholder="Choose seating arrangement" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup className="border-none">
+                <SelectLabel>select seating </SelectLabel>
+                <SelectItem value="Brides family">Brides family</SelectItem>
+                <SelectItem value="Grooms Family">Grooms family</SelectItem>
+                <SelectItem value="Church Members">Church Members </SelectItem>
+                <SelectItem value="Connect">Connect group </SelectItem>
+                <SelectItem value="Secondary School">Secondary School </SelectItem>
+                <SelectItem value="Crawford">Crawford University </SelectItem>
+                <SelectItem value="Others">Others </SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+
         <button
           className=" mx-auto rounded-[45%] border border-black w-[100px] py-3"
           type="submit"

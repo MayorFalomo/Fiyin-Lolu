@@ -21,6 +21,7 @@ const RSVP: React.FC = () => {
   return (
     <div
       id="rsvp"
+      ref={ref}
       className="bg-black relative flex flex-col items-center justify-center min-h-screen w-screen py-[40px]"
     >
       <div className=" w-[90%] mx-auto flex max-[980px]:flex-col items-center min-[980px]:items-start justify-between text-white text-center">

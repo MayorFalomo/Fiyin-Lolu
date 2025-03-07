@@ -19,7 +19,6 @@ interface IProps {
 }
 
 const SmoothBorder: React.FC<IProps> = ({
-  // inView,
   initialOpacity = 0,
   finalOpacity = 1,
   initialWidth = '0',
@@ -28,8 +27,7 @@ const SmoothBorder: React.FC<IProps> = ({
   delay,
   easing,
   bgColor = '#000',
-  className = `z-1 absolute left-0 bottom-[-2px] max-[720px]:bottom-[4px] h-0.5 `,
-  // ref,
+  className = `z-1 absolute left-0 bottom-[-2px] max-[720px]:bottom-[4px] max-[480px]:bottom-[-3px] h-0.5 `,
   onAnimationComplete,
   onAnimationEnd,
 }) => {

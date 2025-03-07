@@ -27,7 +27,7 @@ const Wishlist = (props: Props) => {
           with our biggest love.
         </Texts>
       </div>
-      <div className="flex items-center gap-6">
+      <div className="flex flex-wrap items-center justify-center gap-y-1 gap-x-6">
         <LiquidButton
           text={'View our Wishlist'}
           className="bg-black text-white mt-[30px] font-belleze "

@@ -16,7 +16,7 @@ const Faq = (props: Props) => {
   return (
     <div className=" w-screen p-2 bg-offWhite">
       <div id="faq" className="w-[90%]  bg-offWhite mt-[40px] pb-[60px] mx-auto">
-        <h1 className=" relative text-[40px] max-[600px]:text-[30px] text-start mb-4 font-belleze">
+        <h1 className="relative text-[40px] max-[600px]:text-[30px] text-start mb-4 font-belleze">
           FAQ{' '}
           <span className=" text-[20px] max-[480px]:text-[16px] ">
             (Frequently asked questions).

@@ -1,7 +1,5 @@
 import React from 'react';
 
-type Props = {};
-
 export default async function HeroSection() {
   return (
     <div className="min-h-screen">
@@ -11,12 +9,11 @@ export default async function HeroSection() {
         </h1>
         <p className="text-[60px] font-belleze "> & </p>
         <h1 className="text-[80px]  max-[850px]:text-[60px] font-petrona ">Judah</h1>
-        {/* <img src="/Vector.png" alt="img" /> */}
       </div>
       <div className=" mx-auto min-[850px]:w-[50%] h-[300px] w-[90%]">
         <img
           className="w-full h-full grayscale-[50] object-cover hover:grayscale-0 transition-all duration-700 ease-out "
-          src="/hero.jpg"
+          src="/hero.webp"
           alt="Our Moment"
         />
       </div>

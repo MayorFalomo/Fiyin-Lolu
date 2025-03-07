@@ -4,6 +4,16 @@ export interface NavbarType {
     path: string;
 }
 
+export interface Event {
+  id: number;
+  name: string;
+  day: string;
+  month: string;
+  date: number;
+  time: string;
+  location: string;
+}
+
 export interface GalleryItem {
   id: number;
   title: string;
@@ -18,3 +28,4 @@ export interface FaqType {
   answer: string;
   title?: string;
 }
+

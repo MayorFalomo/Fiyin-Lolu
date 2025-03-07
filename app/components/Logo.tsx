@@ -2,23 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useStore } from '../store/Store';
+import Link from 'next/link';
 
-type Props = {};
-
-const Logo = (props: Props) => {
-  const [show, setShow] = React.useState(false);
-  // const ref = useRef(null);
-  // const isInView = useInView(ref, {
-  //   once: true,
-  // });
-
+const Logo: React.FC = () => {
   const logoColor = useStore((state) => state.logoColor);
-
   return (
-    <div
-      // ref={ref}
-      className="fixed top-[10px] left-[30px] z-40 flex flex-col gap-2 w-[90%] mx-auto"
-    >
+    <div className="fixed top-[10px] left-[30px] z-40 flex flex-col gap-2 w-[90%] mx-auto">
       <div className="flex flex-col gap-[2px] font-sofia w-fit mt-4">
         <motion.p
           initial={{ opacity: 0 }}
@@ -30,7 +19,7 @@ const Logo = (props: Props) => {
           }}
           className={`${logoColor === 'black' ? 'text-black' : 'text-white'}`}
         >
-          #JULOForever
+          <Link href={'/'}>#JULOForever</Link>
         </motion.p>
         <motion.span
           initial={{ opacity: 0, width: 1 }}
@@ -38,7 +27,6 @@ const Logo = (props: Props) => {
             opacity: 1,
             width: 100,
           }}
-          onAnimationComplete={() => setShow(true)}
           transition={{
             duration: 0.8,
             delay: 0.5,
@@ -48,19 +36,6 @@ const Logo = (props: Props) => {
             logoColor === 'black' ? 'bg-black' : 'bg-white'
           } h-0.5 w-[70px] `}
         ></motion.span>
-        {/* <motion.p
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: show ? 1 : 0,
-            transition: {
-              duration: 0.5,
-              delay: 0.6,
-            },
-          }}
-          className=" text-end"
-        >
-          L
-        </motion.p> */}
       </div>
     </div>
   );

@@ -39,11 +39,6 @@ const AnimatedText: React.FC<TextsProps> = ({
     },
   };
 
-  const variantStyles = {
-    primary: 'text-gray-800',
-    secondary: 'text-gray-600',
-  };
-
   return (
     <div className="overflow-hidden" ref={ref}>
       <motion.span

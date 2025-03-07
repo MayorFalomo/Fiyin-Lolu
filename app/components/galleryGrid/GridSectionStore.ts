@@ -5,72 +5,107 @@ export const GalleryItems: GalleryItem[] = [
     id: 1,
     title: "Mountain Retreat",
     description: "Serene mountain landscape at sunset",
-    imageUrl: "/lolu_look.jpg",
+    imageUrl: "/lolu_look.webp",
     size: "large"
   },
   {
     id: 2,
     title: "Coastal Waves",
     description: "Ocean waves crashing against rocky shore",
-    imageUrl: "/almost_kissing.jpg",
+    imageUrl: "/almost_kissing.webp",
     size: "tall"
   },
   {
     id: 3,
     title: "Desert Dunes",
     description: "Golden sand dunes at dawn",
-    imageUrl: "/kiss_shoulder.jpg",
+    imageUrl: "/entrance.webp",
     size: "medium"
   },
   {
     id: 4,
     title: "Forest Path",
     description: "Misty forest trail in autumn",
-    imageUrl: "/shoe_exchange.jpg",
+    imageUrl: "/shoe_exchange.webp",
     size: "small"
   },
   {
     id: 5,
     title: "Urban Skyline",
     description: "City skyline at night with lights",
-    imageUrl: "/almost_kissing.jpg",
+    imageUrl: "/flower_ring.webp",
     size: "small"
   },
   {
     id: 6,
     title: "Tropical Paradise",
     description: "Palm trees and clear blue water",
-    imageUrl: "/lolu_look.jpg",
+    imageUrl: "/lolu_look.webp",
     size: "tall"
   },
   {
     id: 7,
     title: "Snowy Peaks",
     description: "Snow-capped mountain peaks",
-    imageUrl: "/shoe_exchange.jpg",
+    imageUrl: "/smells_her.webp",
     size: "large"
   },
   {
     id: 8,
     title: "Autumn Colors",
     description: "Vibrant fall foliage by a lake",
-    imageUrl: "https://images.unsplash.com/photo-1508669232496-137b159c1cdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "/entrance.webp",
     size: "medium"
   },
   {
     id: 9,
     title: "Autumn Colors",
     description: "Vibrant fall foliage by a lake",
-    imageUrl: "https://images.unsplash.com/photo-1508669232496-137b159c1cdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    size: "small"
+    imageUrl: "/smiling_faces.webp",
+    size: "medium"
   },
   {
     id: 10,
     title: "Autumn Colors",
     description: "Vibrant fall foliage by a lake",
-    imageUrl: "https://images.unsplash.com/photo-1508669232496-137b159c1cdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    size: "wide"
-  }
+    imageUrl: "/walking.webp",
+    size: "medium"
+  },
+  {
+    id: 11,
+    title: "Autumn Colors",
+    description: "Vibrant fall foliage by a lake",
+    imageUrl: "back_to_wall.webp",
+    size: "tall"
+  },
+  {
+    id: 12,
+    title: "Autumn Colors",
+    description: "Vibrant fall foliage by a lake",
+    imageUrl: "/rest_on_him.webp",
+    size: "medium"
+  },
+  {
+    id: 13,
+    title: "Autumn Colors",
+    description: "Vibrant fall foliage by a lake",
+    imageUrl: "/hero.webp",
+    size: "small"
+  },
+  {
+    id: 14,
+    title: "Autumn Colors",
+    description: "Vibrant fall foliage by a lake",
+    imageUrl: "/ring_showing.webp",
+    size: "small"
+  },
+  {
+    id: 15,
+    title: "Autumn Colors",
+    description: "Vibrant fall foliage by a lake",
+    imageUrl: "/waist_held.webp",
+    size: "small"
+  },
 ]
 
  // Function to determine the height based on item size
@@ -97,13 +132,13 @@ export const GalleryItems: GalleryItem[] = [
       case 'small':
         return '';
       case 'medium':
-        return 'md:col-span-1';
+        return 'sm:col-span-1';
       case 'large':
-        return 'md:col-span-2 md:row-span-2';
+        return 'sm:col-span-2 md:row-span-2';
       case 'tall':
-        return 'md:row-span-2';
+        return 'sm:row-span-2';
       case 'wide':
-        return 'md:col-span-2';
+        return 'sm:col-span-2';
       default:
         return '';
     }
